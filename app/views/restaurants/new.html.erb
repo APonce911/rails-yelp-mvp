@@ -1,0 +1,12 @@
+
+
+<h1>New Restaurant</h1>
+
+<% if @restaurant.errors.any? %>
+<p>You have the following errors:</p>
+  <%= @restaurant.errors.messages %>
+<% end %>
+
+<%= render 'form', restaurant: @restaurant %>
+
+<%= link_to 'Back', restaurants_path %>
